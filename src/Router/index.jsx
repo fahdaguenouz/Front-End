@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
             element:<About />
           },
           {
-            path: '/courses',
+            path: '/tutorials',
             element:<CourseHome />
           },
           {
@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
             element:<Pricing />
           },
           {
-            path: '/journal',
+            path: '/blog',
             element:<Blog />
           },
           {

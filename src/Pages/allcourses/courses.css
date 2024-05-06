@@ -9,14 +9,15 @@
 .coursesCard .img {
   width: 80px;
   height: 80px;
-  border-radius: 50%;
+  border-radius: 40%;
   background-color: #039ee3;
-  padding: 15px;
+  
 }
 .coursesCard img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 40%;
 }
 .coursesCard .text {
   margin-left: 15px;

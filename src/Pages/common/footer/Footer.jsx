@@ -10,7 +10,7 @@ const Footer = () => {
         <div className='container flexSB'>
           <div className='left row'>
             <h1>Newsletter - Stay tune and get the latest update</h1>
-            <span>Far far away, behind the word mountains</span>
+            <span>The beautiful thing about learning is that no one can take it away from you. - B.B. King</span>
           </div>
           <div className='right row'>
             <input type='text' placeholder='Enter email address' />
@@ -23,7 +23,7 @@ const Footer = () => {
           <div className='box logo'>
             <h1>Do it Yourself</h1>
             <span>Break It , Fix It , Flex It </span>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            <p>Self-learning is the key to unlocking the autonomy to fix things and conquer any challenge.</p>
 
             <i className='fab fa-facebook-f icon'></i>
             <i className='fab fa-twitter icon'></i>
@@ -34,7 +34,7 @@ const Footer = () => {
             <ul>
               <li><Link to="/about">About Us</Link></li>
               <li><Link>Services</Link></li>
-              <li><Link>Courses</Link></li>
+              <li><Link>tutorials</Link></li>
               <li><Link>Blog</Link></li>
               <li><Link>Contact us</Link></li>
             </ul>

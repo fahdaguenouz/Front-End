@@ -1,6 +1,8 @@
-import React from "react"
-import "./courses.css"
-import { coursesCard } from "../../dummydata"
+import './courses.css';
+
+import React from 'react';
+
+import { coursesCard } from '../../dummydata';
 
 const CoursesCard = () => {
   return (
@@ -44,7 +46,7 @@ const CoursesCard = () => {
               </div>
               <div className='price'>
                 <h3>
-                  {val.priceAll} / {val.pricePer}
+                  {val.priceAll} 
                 </h3>
               </div>
               <button className='outline-btn'>ENROLL NOW !</button>
