@@ -41,6 +41,9 @@ li {
 .row {
   width: 50%;
 }
+Link {
+  text-decoration: none;
+}
 button {
   padding: 17px 30px;
   background-color: #fff;

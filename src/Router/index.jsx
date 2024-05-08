@@ -16,6 +16,7 @@ import Team from './../Pages/team/Team';
 import Pricing from './../Pages/pricing/Pricing';
 import Blog from './../Pages/blog/Blog';
 import Contact from './../Pages/contact/Contact';
+import AuthHome from '../Pages/AuthHome/AuthHome';
 
 export const router = createBrowserRouter([
     {
@@ -65,7 +66,11 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/user',
-        element:  <UserLayout />
+        element:  <AuthHome />
+      },
+      {
+        path: '/',
+        element:<Home />
       },
     ]
   },

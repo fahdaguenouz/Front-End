@@ -1,40 +1,36 @@
+import { Usercontext } from '@/Context/AuthProvider';
+import { CSpinner } from '@coreui/react';
 import React, { useState, useEffect } from 'react';
-import { CAlert } from "@coreui/react";
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { Outlet, useNavigate } from 'react-router-dom';
+import 'ldrs/quantum'
+import Sidebar from '@/Pages/common/Sidebar/Sidebar';
 const UserLayout = () => {
-    const [visible, setVisible] = useState(false);
+    const navigate = useNavigate()
 
+    const { logout, authenticated, loading } = Usercontext()
     useEffect(() => {
-        // Automatically show the alert when the component mounts
-        setVisible(true);
+        if (!authenticated) {
+            // logout()
+            navigate('/login')
+        }
+    }, [authenticated])
 
-        // Optional: Automatically hide after a delay
-        const timer = setTimeout(() => {
-            setVisible(false);
-        }, 5000);
+    // if (loading || !authenticated) {
+    //     return <div className="text-center text-primary" >
 
-        return () => clearTimeout(timer);
-    }, []);
+
+    //         <l-quantum
+    //             size="45"
+    //             speed="1.75"
+    //             color="#039ee3"
+    //         ></l-quantum>
+    //     </div>;
+    // }
 
     return (
         <div>
-            {visible && (
-                <CAlert color="success" dismissible style={{
-                    position: 'absolute', // Use 'fixed' if you want it to stay in place while scrolling
-                    top: '20px',          // Adjust top positioning as needed
-                    right: '20px',        // Places it on the right side of the page
-                    width: '300px',        // Width of the alert
-                    height: '70px',       // Height of the alert
-                    textAlign: 'center',
-                    margin: "auto",
-                }} onClose={() => setVisible(false)}>
-                    Login successful - Welcome!
-                </CAlert>
-            )}
-            
-            <p>Login successful</p>
+            <Sidebar/>
+            <Outlet />
         </div>
     );
 }

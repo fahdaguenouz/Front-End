@@ -29,11 +29,11 @@ export const AuthProvider = ({ children }) => {
     const [authenticated, _setAuthenticated] = useState('true' === window.localStorage.getItem('AUTHENTICATED'));
 
 
-    // useEffect(() => {
-    //     if (authenticated) {
-    //         setLoading(true);
-    //     }
-    // }, [authenticated]);
+    useEffect(() => {
+        if (authenticated) {
+            setLoading(true);
+        }
+    }, [authenticated]);
 
 
     const setAuthenticated = (isAuthenticated) => {
@@ -109,7 +109,7 @@ export const AuthProvider = ({ children }) => {
             setAuthenticated,
             login,
             setToken,
-
+            loading,
         }}>
             {children}
         </AuthContext.Provider>

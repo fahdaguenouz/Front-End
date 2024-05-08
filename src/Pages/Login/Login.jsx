@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,6 +12,7 @@ const Login = () => {
     const [email,setEmail]=useState();
     const [password,setPassword]=useState();
     const [ErrMsg,setErrMsg]=useState('');
+    const [saveMe,setSaveMe]=useState(false)
     const [isActive, setIsActive] = useState(false);
     const navigate=useNavigate()
     const handleRegisterClick = () => {
@@ -21,6 +22,16 @@ const Login = () => {
     const handleLoginClick = () => {
         setIsActive(false);
     };
+
+    useEffect(() => {
+      const savedEmail = window.localStorage.getItem('email');
+      const savedPassword = window.localStorage.getItem('password');
+      if (savedEmail && savedPassword) {
+        setEmail(savedEmail);
+        setPassword(savedPassword);
+        setSaveMe(true);
+      }
+    }, []);
     const HandleLogin= async(e)=>{
         e.preventDefault()
         setErrMsg("")
@@ -34,6 +45,13 @@ const Login = () => {
               if (data.token) {
                 setToken(data.token);
               }
+              if (saveMe) {
+                window.localStorage.setItem('email', email);
+                window.localStorage.setItem('password', password);
+            } else {
+                localStorage.removeItem('email');
+                localStorage.removeItem('password');
+            }
               navigate('/user');
             }
           } catch (error) {
@@ -93,9 +111,10 @@ const Login = () => {
                         <a href="#" className="icon"><FontAwesomeIcon icon={faLinkedinIn} /></a>
                     </div>
                     <span>or use your email password</span>
-                    <input type="email" placeholder="Email"  name='email' onChange={(e)=>setEmail(e.target.value)} />
-                    <input type="password" placeholder="Password" name='password' onChange={(e)=>setPassword(e.target.value)} />
+                    <input type="email" value={email} placeholder="Email"  name='email' onChange={(e)=>setEmail(e.target.value)} />
+                    <input type="password" value={password} placeholder="Password" name='password' onChange={(e)=>setPassword(e.target.value)} />
                     <a href="#">Forget Your Password?</a>
+                    <input type="checkbox" name="saveMe" id="saveMe" style={{ display:'' }} onChange={(e)=>setSaveMe(e.target.checked)}/>Save Me 
                     <button type='submit' onClick={HandleLogin}>Sign In</button>
                     <button onClick={()=>navigate('/')}>Annuler</button>
                     { ErrMsg && <p className='Error'>{ErrMsg}</p>}
