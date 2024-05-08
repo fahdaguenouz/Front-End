@@ -1,15 +1,25 @@
 .coursesCard {
   padding: 50px 0;
 }
+.coursesCard .items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.coursesCard .content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .coursesCard .items {
   background-color: #fff;
   padding: 30px;
   text-align: center;
 }
 .coursesCard .img {
-  width: 80px;
-  height: 80px;
-  border-radius: 40%;
+  width: 100%;
+  height: 200px;
+  
   background-color: #039ee3;
   
 }
@@ -17,7 +27,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 40%;
+ 
 }
 .coursesCard .text {
   margin-left: 15px;
@@ -116,3 +126,4 @@
 /*-------------online---------*/
 @media screen and (max-width: 768px) {
 }
+

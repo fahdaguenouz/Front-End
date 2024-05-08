@@ -208,3 +208,10 @@
 .container-loggin.active .toggle-right{
     transform: translateX(200%);
 }
+.Error{
+    color: red;
+    background-color: pink;
+    border: 1px solid red;
+    text-align: center;
+    border-radius: 20px;
+}
