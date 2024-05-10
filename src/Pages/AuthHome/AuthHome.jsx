@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { CAlert } from "@coreui/react";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const AuthHome = () => {
     const [visible, setVisible] = useState(false);
