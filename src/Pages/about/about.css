@@ -73,10 +73,10 @@
 }
 /*----------awrapper------------*/
 @media screen and (max-width: 800px) {
-  .aboutHome .container {
+  .aboutHome .containerr {
     flex-direction: column-reverse;
   }
-  .aboutHome .row {
+  .aboutHome .roww {
     width: 100%;
   }
   .awrapper {

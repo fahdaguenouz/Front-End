@@ -7,19 +7,19 @@ const Footer = () => {
   return (
     <>
       <section className='newletter'>
-        <div className='container flexSB'>
-          <div className='left row'>
+        <div className='containerr flexSB'>
+          <div className='left roww'>
             <h1>Newsletter - Stay tune and get the latest update</h1>
             <span>The beautiful thing about learning is that no one can take it away from you. - B.B. King</span>
           </div>
-          <div className='right row'>
+          <div className='right roww'>
             <input type='text' placeholder='Enter email address' />
             <i className='fa fa-paper-plane'></i>
           </div>
         </div>
       </section>
       <footer>
-        <div className='container padding'>
+        <div className='containerr padding'>
           <div className='box logo'>
             <h1>Do it Yourself</h1>
             <span>Break It , Fix It , Flex It </span>

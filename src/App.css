@@ -9,7 +9,7 @@ body {
   background-color: #f8f8f8;
 }
 /*------------global-----------*/
-.container {
+.containerr {
   max-width: 85%;
   margin: auto;
 }
@@ -38,7 +38,7 @@ a {
 li {
   list-style-type: none;
 }
-.row {
+.roww {
   width: 50%;
 }
 Link {

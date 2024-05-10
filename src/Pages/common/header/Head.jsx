@@ -7,7 +7,7 @@ const Head = () => {
     <>
     
       <section className='head'>
-        <div className='container flexSB'>
+        <div className='containerr flexSB'>
           <div className='logo'>
             <h1><Link style={{ color:"#4ab6ea" ,textDecorationLine:'none'}} to="/">Do It Yourself</Link></h1>
             <span>Break It , Fix It , Flex It </span>

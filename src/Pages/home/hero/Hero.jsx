@@ -6,8 +6,8 @@ const Hero = () => {
   return (
     <>
       <section className='hero'>
-        <div className='container hero-header'>
-          <div className='row'>
+        <div className='containerr hero-header'>
+          <div className='roww'>
             <Heading subtitle='WELCOME TO DIY' title='DIY Repair Revolution: Master the Art of Fixing' />
             <p>Enter a world where problems are just opportunities in disguise. Equip yourself with the knowledge to repair what's broken and enhance your skills with every fix. Your self-reliance journey starts here!.</p>
             <div className='button'>

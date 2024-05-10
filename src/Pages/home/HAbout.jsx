@@ -8,7 +8,7 @@ const HAbout = () => {
   return (
     <>
       <section className='homeAbout'>
-        <div className='container'>
+        <div className='containerr'>
           <Heading subtitle='our Tutoriels' title='explore our popular Tutoriels' />
 
           <div className='coursesCard'>

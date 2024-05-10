@@ -10,7 +10,7 @@ const Team = () => {
     <>
       <Back title='Team' />
       <section className='team padding'>
-        <div className='container grid'>
+        <div className='containerr grid'>
           <TeamCard />
         </div>
       </section>

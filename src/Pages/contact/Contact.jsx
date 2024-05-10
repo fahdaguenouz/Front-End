@@ -8,11 +8,11 @@ const Contact = () => {
     <>
       <Back title='Contact us' />
       <section className='contacts padding'>
-        <div className='container shadow flexSB'>
-          <div className='left row'>
+        <div className='containerr shadow flexSB'>
+          <div className='left roww'>
             <iframe src={map}></iframe>
           </div>
-          <div className='right row'>
+          <div className='right roww'>
             <h1>Contact us</h1>
             <p>We're open for any suggestion or just to have a chat</p>
 

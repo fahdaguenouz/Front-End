@@ -43,13 +43,13 @@ form .flexSB input:nth-child(1) {
   word-spacing: 5px;
 }
 @media screen and (max-width: 768px) {
-  .contacts .container {
+  .contacts .containerr {
     flex-direction: column;
   }
   .contacts iframe {
     height: 50vh;
   }
-  .contacts .row {
+  .contacts .roww {
     width: 100%;
   }
 }

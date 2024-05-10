@@ -14,7 +14,7 @@ const Sidebar = () => {
     return (
         <div>
 
-            <header className="header">
+            <header className="headerr">
                 <div className="header_container">
                     <div className="none"> </div>
                     <div className="search">
@@ -29,8 +29,8 @@ const Sidebar = () => {
                             <i className="fa-solid fa-grip"></i>
                             <i className="fa-solid fa-bell"></i>
                         </div>
-                        <div className="img">
-                            <img src="images/logo.png" />
+                        <div className="imgg">
+                            <img className='imagee' src="images/logo.png" />
                         </div>
                     </div>
 
@@ -41,7 +41,7 @@ const Sidebar = () => {
             </header>
 
 
-            <section className={`nav ${isNavExpanded ? 'show-menu' : ''}`} id="navbar">
+            <section className={`navv ${isNavExpanded ? 'show-menu' : ''}`} id="navbar">
                 <nav className="nav_container">
                     <div>
                         <a href="#" className="nav_link nav_logo" onClick={() => handleLinkClick('home')}>
@@ -89,7 +89,7 @@ const Sidebar = () => {
                             </div>
 
                             <div className="nav_items subscribe-container">
-                                <h3 className="nav_subtitle">SUBSCRIPTIONS</h3>
+                                <h3 className="nav_subtitle h33">SUBSCRIPTIONS</h3>
 
                                 <a href="#" className="nav_link">
                                     <img className="subscribe" src="https://img.icons8.com/external-victoruler-flat-victoruler/64/000000/external-boy-people-victoruler-flat-victoruler-5.png" />
@@ -143,9 +143,9 @@ const Sidebar = () => {
 
 
             <main>
-                <section class="section transheader homepage parallax" data-stellar-background-ratio="0.5" style={{ backgroundImage: "url('images/GettyImages_641535676.0.jpg')", backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
-                    <div class="container">
-                        <div class="row">
+                <section class="sectionn transheader homepage parallax" data-stellar-background-ratio="0.5" style={{ backgroundImage: "url('images/GettyImages_641535676.0.jpg')", backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+                    <div class="containerr">
+                        <div class="roww">
                             <div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
                                 <h2>Let's Analysis Your Website SEO</h2>
                                 <p class="lead">Now you can customize your SEO service according to your need</p>

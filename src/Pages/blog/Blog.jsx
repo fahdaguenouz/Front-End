@@ -8,7 +8,7 @@ const Blog = () => {
     <>
       <Back title='Popular Blogs' />
       <section className='blog padding'>
-        <div className='container grid2'>
+        <div className='containerr grid2'>
           <BlogCard />
         </div>
       </section>

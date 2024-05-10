@@ -9,7 +9,7 @@ const Hblog = () => {
   return (
     <>
       <section className='blog'>
-        <div className='container'>
+        <div className='containerr'>
           <Heading subtitle='OUR BLOG' title='Recent From Blog' />
           <div className='grid2'>
             {blog.slice(0, 3).map((val) => (

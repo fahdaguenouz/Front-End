@@ -1,20 +1,10 @@
 /*========== GOOGLE FONTS ==========*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-*, ::before, ::after {
-  box-sizing: border-box;
-}
 
-body {
-  margin: 56px 0 0 0;
-  padding: 16px 16px 0;
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  color: #58555E;
-  background: white;
-}
 
-h3 {
+
+.h33 {
   margin: 0;
 }
 
@@ -22,7 +12,7 @@ a {
   text-decoration: none;
 }
 
-img {
+.imagee {
   max-width: 100%;
   height: auto;
 }
@@ -33,7 +23,7 @@ i {
 }
 
 /*========== HEADER ==========*/
-.header {
+.headerr {
   position: fixed;
   top: 0;
   left: 0;
@@ -75,7 +65,7 @@ header .user {
   align-items: center;
 }
 
-header .user img {
+header .user .imagee {
   width: 35px;
   height: 35px;
   object-fit: contain;
@@ -98,7 +88,7 @@ header .toggle {
 }
 
 /*========== NAV ==========*/
-.nav {
+.navv {
   position: fixed;
   top: 0;
   left: -100%;
@@ -275,14 +265,9 @@ header .toggle {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    padding: 16px 48px 0 96px;
-  }
 
-  header {
-    padding: 0 48px 0 96px;
-  }
 
+  
   header .header_container {
     height: calc(56px + 8px);
   }
@@ -300,24 +285,24 @@ header .toggle {
     display: block;
   }
 
-  header .img {
+  header .imgg {
     width: 40px;
     height: 40px;
     order: 1;
   }
 
-  .nav {
+  .navv {
     left: 0;
     padding: 19px 24px 0;
     width: 72px;
     /* Reduced navbar */
   }
 
-  .nav .nav_items {
+  .navv .nav_items {
     row-gap: 27px;
   }
 
-  .nav .nav_icon {
+  .navv .nav_icon {
     font-size: 20px;
   }
 
@@ -333,17 +318,17 @@ header .toggle {
   }
 
   /* Navbar expanded */
-  .nav:hover {
+  .navv:hover {
     width: 265px;
   }
 
   /* Visible elements */
-  .nav:hover .navtop .nav_link:nth-child(4),
-  .nav:hover .subscribe-container,
-  .nav:hover .nav_subtitle,
-  .nav:hover .nav_dropdown-icon,
-  .nav:hover .nav_name,
-  .nav:hover .logo_name {
+  .navv:hover .navtop .nav_link:nth-child(4),
+  .navv:hover .subscribe-container,
+  .navv:hover .nav_subtitle,
+  .navv:hover .nav_dropdown-icon,
+  .navv:hover .nav_name,
+  .navv:hover .logo_name {
     opacity: 1;
   }
 }
@@ -354,7 +339,7 @@ header .toggle {
   margin: 0 auto;
 }
 
-.section {
+.sectionn {
   background-color: #ffffff;
   padding: 10rem 0;
   position: relative;
@@ -362,7 +347,7 @@ header .toggle {
   overflow: hidden;
 }
 
-.section.bt {
+.sectionn.bt {
   border-top: 1px solid #eee;
 }
 
