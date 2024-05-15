@@ -3,7 +3,7 @@ import { CSpinner } from '@coreui/react';
 import React, { useState, useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import 'ldrs/quantum'
-import Sidebar from '@/Pages/common/Sidebar/Sidebar';
+import Sidebar from '@/Pages/GuestPages/common/Sidebar/Sidebar';
 const UserLayout = () => {
     const navigate = useNavigate()
 
@@ -29,7 +29,7 @@ const UserLayout = () => {
 
     return (
         <div>
-            <Sidebar/>
+            {/* <Sidebar/> */}
             <Outlet />
         </div>
     );

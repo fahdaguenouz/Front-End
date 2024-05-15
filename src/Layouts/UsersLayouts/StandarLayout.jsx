@@ -2,13 +2,13 @@ import { Usercontext } from '@/Context/AuthProvider';
 import React, { useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 
-const AdminLayout = () => {
+const StandarLayout = () => {
     const navigate = useNavigate()
 
     const { logout, authenticated, loading } = Usercontext()
     useEffect(() => {
         if (!authenticated) {
-            // logout()
+            
             navigate('/login')
         }
     }, [authenticated])
@@ -19,4 +19,4 @@ const AdminLayout = () => {
     );
 }
 
-export default AdminLayout;
+export default StandarLayout;

@@ -4,13 +4,13 @@ import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGooglePlusG, faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import UserApi from '../../Service/api/UserApi';
-import { Usercontext } from '../../Context/AuthProvider';
-
+import 'ldrs/quantum'
+import { axiosClient, fetchCSRFToken } from '@/api/axios';
+import { Usercontext } from '@/Context/AuthProvider';
 const Login = () => {
-    const { login, setAuthenticated, setToken } = Usercontext()
-
-    const [email,setEmail]=useState();
-    const [password,setPassword]=useState();
+    const { login, setAuthenticated, setToken ,loading,authenticated} = Usercontext()
+    const [email,setEmail]=useState('');
+    const [password,setPassword]=useState('');
     const [ErrMsg,setErrMsg]=useState('');
     const [saveMe,setSaveMe]=useState(false)
     const [isActive, setIsActive] = useState(false);
@@ -38,6 +38,7 @@ const Login = () => {
         console.log('Attempting login with:', { email, password });
 
         try {
+          // await fetchCSRFToken(); 
             const response = await login(email, password);
             const { status, data } = response;
             if (status === 200 || status === 204) {
@@ -79,6 +80,18 @@ const Login = () => {
       
           }
     }
+    
+    // if (loading || !authenticated) {
+    //     return <div className="text-center text-primary" >
+
+
+    //         <l-quantum
+    //             size="45"
+    //             speed="1.75"
+    //             color="#039ee3"
+    //         ></l-quantum>
+    //     </div>;
+    // }
 
     return (
         <div className='all-container'>

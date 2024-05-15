@@ -2,7 +2,7 @@ import React , { Fragment } from "react"
 import OnlineCourses from "../allcourses/OnlineCourses"
 import Heading from "../common/heading/Heading"
 import "../allcourses/courses.css"
-import { coursesCard } from "../../dummydata"
+import { coursesCard } from "@/dummydata"
 
 const HAbout = () => {
   return (

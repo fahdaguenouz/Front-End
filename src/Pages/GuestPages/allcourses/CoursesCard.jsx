@@ -2,7 +2,7 @@ import './courses.css';
 
 import React from 'react';
 
-import { coursesCard } from '../../dummydata';
+import { coursesCard } from './../../../dummydata';
 
 const CoursesCard = () => {
   return (

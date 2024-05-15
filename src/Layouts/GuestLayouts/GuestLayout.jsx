@@ -1,9 +1,9 @@
+import Footer from '@/Pages/GuestPages/common/footer/Footer';
+import Header from '@/Pages/GuestPages/common/header/Header';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Header from '../../Pages/common/header/Header';
 // import Header from '../../Pages/Header';
 // import Footer from '../../Pages/Footer';
-import Footer from './../../Pages/common/footer/Footer';
 
 const GuestLayout = () => {
     return (

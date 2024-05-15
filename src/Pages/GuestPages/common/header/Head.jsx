@@ -1,6 +1,6 @@
+import TranslationWidget from "@/Translation/TranslationWidget";
 import React from "react"
 import { Link } from 'react-router-dom';
-import TranslationWidget from "../../Translation/TranslationWidget";
 
 const Head = () => {
   return (

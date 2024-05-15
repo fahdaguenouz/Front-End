@@ -6,6 +6,7 @@ import Hero from "./hero/Hero.jsx"
 import Hprice from "./Hprice.jsx"
 import Testimonal from "./testimonal/Testimonal.jsx"
 
+
 const Home = () => {
   return (
     <>

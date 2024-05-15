@@ -8,15 +8,17 @@ import UserLayout from "../Layouts/UsersLayouts/UserLayout";
 // import AboutUs from "../Pages/AboutUs";
 
 import LoginLayouts from "../Layouts/GuestLayouts/LoginLayouts";
-import Home from './../Pages/home/Home';
 import Login from "../Pages/Login/Login";
-import About from './../Pages/about/About';
-import CourseHome from './../Pages/allcourses/CourseHome';
-import Team from './../Pages/team/Team';
-import Pricing from './../Pages/pricing/Pricing';
-import Blog from './../Pages/blog/Blog';
-import Contact from './../Pages/contact/Contact';
-import AuthHome from '../Pages/AuthHome/AuthHome';
+import AuthHome from './../Pages/AuthPages/AuthHome/AuthHome';
+import Contact from './../Pages/GuestPages/contact/Contact';
+import Blog from './../Pages/GuestPages/blog/Blog';
+import Pricing from './../Pages/GuestPages/pricing/Pricing';
+import Team from './../Pages/GuestPages/team/Team';
+import CourseHome from './../Pages/GuestPages/allcourses/CourseHome';
+import About from './../Pages/GuestPages/about/About';
+import Home from './../Pages/GuestPages/home/Home';
+import AuthAdmin from "@/Pages/AuthPages/AuthHome/AuthAdmin";
+
 
 export const router = createBrowserRouter([
     {
@@ -66,7 +68,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/user',
-        element:  <AuthHome />
+        element:  <AuthAdmin />
       },
       {
         path: '/',

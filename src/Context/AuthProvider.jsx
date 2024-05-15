@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { axiosClient } from "../api/axios";
-import UserApi from "../Service/api/UserApi";
+import UserApi from './../Service/api/UserApi';
 
 
 const AuthContext = createContext({
@@ -17,24 +17,29 @@ const AuthContext = createContext({
     setToken: () => {
     },
 
+
 });
 
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState([]);
+    // const [user, setUser] = useState(null);
 
 
 
     const [loading, setLoading] = useState(false);
 
     const [authenticated, _setAuthenticated] = useState('true' === window.localStorage.getItem('AUTHENTICATED'));
-
+    const [sidebarShow, setSidebarShow] = useState(true);
+    const [colorMode, setColorMode] = useState('light');
 
     useEffect(() => {
         if (authenticated) {
+            // getUserData()
             setLoading(true);
+            
         }
     }, [authenticated]);
 
+    
 
     const setAuthenticated = (isAuthenticated) => {
         _setAuthenticated(isAuthenticated)
@@ -52,10 +57,15 @@ export const AuthProvider = ({ children }) => {
     const login = async (email, password) => {
         try {
             const response = await UserApi.login(email, password);
-            const { token } = response.data;
+            const { token,user } = response.data;
+            localStorage.setItem('user', JSON.stringify(user)); 
+            console.log("user: "+ JSON.stringify(user));
             console.log('tttt'+token);
             if (token) {
                 setToken(token);
+                // setUser( JSON.stringify(user));
+                // console.log('ussser'+user);
+                
                 setAuthenticated(true); // Ensure the authenticated state is updated
                 return response; // Optionally return response for further handling
             }
@@ -67,7 +77,17 @@ export const AuthProvider = ({ children }) => {
     }
 
 
-
+        // const getUserData= async()=>{
+        //     try{
+        //         const response = await UserApi.getUserData();
+        //         const { user } = response.data;
+        //         console.log("user: " + JSON.stringify(user));
+        //         setUser(user);
+        //     }catch(error){
+        //         console.error("userdDAta error", error);
+        //         throw error;
+        //     }
+        // }
 
 
 
@@ -94,7 +114,7 @@ export const AuthProvider = ({ children }) => {
 
     // }
 
-
+    const toggleSidebar = () => setSidebarShow(!sidebarShow);
 
 
 
@@ -110,6 +130,11 @@ export const AuthProvider = ({ children }) => {
             login,
             setToken,
             loading,
+            sidebarShow,
+             toggleSidebar,
+              colorMode,
+               setColorMode,
+            //    user,
         }}>
             {children}
         </AuthContext.Provider>
